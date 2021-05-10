@@ -1,0 +1,5 @@
+###> IDE/PhpStorm ###
+/.idea/
+###< IDE/PhpStorm ###
+
+/vendor/

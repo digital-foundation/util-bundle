@@ -1,0 +1,30 @@
+{
+    "name": "digital-foundation/util-bundle",
+    "description": "Simple helper components for symfony projects",
+    "keywords": ["digital", "foundation", "util"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bagrat Hakobyan",
+            "email": "b.a.hakobyan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.3",
+        "symfony/cache": "^5.2",
+        "symfony/config": "^5.2",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/filesystem": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "DigitalFoundation\\UtilBundle\\": "src/",
+            "DigitalFoundation\\UtilBundle\\BusinessLogic\\": "src/Tier/BusinessLogic/"
+        },
+        "exclude-from-classmap": [
+            "/src/Tests/"
+        ]
+    },
+    "minimum-stability": "dev"
+}
