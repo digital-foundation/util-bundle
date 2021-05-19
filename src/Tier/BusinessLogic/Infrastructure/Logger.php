@@ -255,7 +255,7 @@ abstract class Logger {
         ?string $folder = null
     ) : void {
 
-        $logDir = Kernel::getLogDir() . ($folder ?? $type);
+        $logDir = rtrim(Kernel::getLogDir(), "/") . "/" . ($folder ?? $type);
 
         if ( !file_exists($logDir) ) {
             mkdir($logDir, 0777, true);
