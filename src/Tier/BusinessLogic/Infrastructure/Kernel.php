@@ -58,7 +58,7 @@ abstract class Kernel {
      */
     static private function initKernel () : void {
         if ( self::$kernel === null ) {
-            self::$kernel = new AppKernel($_SERVER["APP_ENV"], $_SERVER["APP_DEBUG"]);
+            self::$kernel = new AppKernel($_SERVER["APP_ENV"], boolval($_SERVER["APP_DEBUG"]));
         }
     }
 }

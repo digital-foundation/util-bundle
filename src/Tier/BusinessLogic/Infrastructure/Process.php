@@ -22,21 +22,21 @@ namespace DigitalFoundation\UtilBundle\BusinessLogic\Infrastructure;
 abstract class Process {
 
     /**
-     * @param int $value
+     * @param int $memoryLimit
      *
      * @return void
      */
-    static public function setMemoryLimit(int $value): void {
-        ini_set("memory_limit", "{$value}M");
+    static public function setMemoryLimit(int $memoryLimit): void {
+        ini_set("memory_limit", "{$memoryLimit}M");
     }
 
     /**
-     * @param int $seconds
+     * @param int $timeLimit
      *
      * @return void
      */
-    static public function setTimeLimit(int $seconds): void {
-        set_time_limit($seconds);
+    static public function setTimeLimit(int $timeLimit): void {
+        set_time_limit($timeLimit);
     }
 
     /**
